@@ -1,0 +1,176 @@
+body {
+    font-size: 14px;
+    margin: 0;
+    color: #333333;
+    background-color: #F9F9F9;;
+    font-family: montserrat-reg;
+}
+
+a {
+    color: #333333;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+%_font-reg, .font-reg{
+    font-family: montserrat-reg;
+}
+
+%_font-bold, .font-bold{
+    font-family: montserrat-bold;
+}
+
+%_font-semibold, .font-semibold{
+    font-family: montserrat-semibold;
+}
+
+%_font-light, .font-light{
+    font-family: montserrat-light;
+}
+
+%_font-avenir, .font-avenir{
+    font-family: montserrat-light;
+}
+
+@each $value in $fontsize_value_list {
+    .f#{nth($value, 1)} {
+        font-size: nth($value, 2);
+
+        @include media-breakpoint-down(lg) {
+            font-size: nth($value, 2) - 2;
+        } 
+    }
+}
+
+@each $value in $fontsize_value_list {
+    .lh#{nth($value, 1)} {
+        line-height: nth($value, 2); 
+    }
+}
+
+@each $value in $value_list {
+    .p#{nth($value, 1)} {
+        padding: nth($value, 2) !important; 
+    }
+    .pr#{nth($value, 1)} {
+        padding-right: nth($value, 2) !important;
+    }
+    .pl#{nth($value, 1)} {
+        padding-left: nth($value, 2) !important;
+    }
+    .pt#{nth($value, 1)} {
+        padding-top: nth($value, 2) !important;
+    }
+    .pb#{nth($value, 1)} {
+        padding-bottom: nth($value, 2) !important;
+    }
+    .py#{nth($value, 1)} {
+        padding: nth($value, 2) 0 !important;
+    }
+    .px#{nth($value, 1)} {
+        padding: 0 nth($value, 2) !important;
+    }
+    .my#{nth($value, 1)} {
+        margin: nth($value, 2) 0 !important; 
+    }
+    .mx#{nth($value, 1)} {
+        margin: 0 nth($value, 2) !important; 
+    }
+    .mb#{nth($value, 1)} {
+        margin-bottom: nth($value, 2) !important; 
+    }
+    .mr#{nth($value, 1)} {
+        margin-right: nth($value, 2) !important; 
+    }
+    .ml#{nth($value, 1)} {
+        margin-left: nth($value, 2) !important; 
+    }
+    .mt#{nth($value, 1)} {
+        margin-top: nth($value, 2) !important; 
+    }
+    .m#{nth($value, 1)} {
+        margin: nth($value, 2) !important; 
+    }
+}
+
+
+%_a_centering, .a_centering{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+%_x_centering, .x_centering{
+  left: 50%;
+  transform: translateX(-50%);
+}
+%_y_centering, .y_centering{
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+%_all_transition, .all_transition {
+  @include transition(all 200ms linear 0s);
+}
+
+.overflow-auto{
+    overflow: auto;
+}
+
+.overflowy-auto{
+    overflow-y: auto;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.v-hide{
+    visibility: hidden;
+}
+
+.circle{
+    @include rounded-corner(50%);
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+.new-scrollbar{
+    /* width */
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      border: solid 3px transparent;
+    }
+     
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #E0E0E0;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #C7C7C7; 
+    }
+}
+
+.t0{top: 0px;}
+.r0{right: 0px;}
+.l0{left: 0px;}
+.b0{bottom: 0px;}
+
+.primary_clr {color: $primary_clr}
+.secondary_clr {color: $secondary_clr}
+.red_clr {color: $red_clr}
+.green_clr {color: $green_clr}
+.blue_clr {color: $blue_clr}
+
+.primary_bg {color: $primary_clr}
+.secondary_bg {color: $secondary_clr}
+.red_bg {color: $red_clr}
+.green_bg {color: $green_clr}
+.blue_bg {color: $blue_clr}

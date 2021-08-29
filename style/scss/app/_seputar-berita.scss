@@ -1,0 +1,6 @@
+.sb-section1 {
+    background: #FFFFFF;
+    @include rounded-corner(10px);
+    @include box-shadow(0px 4px 24px rgba(0, 0, 0, 0.04));
+    padding: 32px;
+}

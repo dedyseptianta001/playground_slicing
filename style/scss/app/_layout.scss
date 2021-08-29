@@ -1,0 +1,23 @@
+.top-navbar {
+    height: 72px;
+    background-color: $red_clr;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.spacer {
+    padding-top: 72px;
+}
+
+.side-menu {
+    width: 240px;
+    background: #FFFFFF;
+    padding: 16px 12px;
+    @include rounded-corner(12px);
+    @include box-shadow(0px 4px 24px rgba(0, 0, 0, 0.04));
+}
+
